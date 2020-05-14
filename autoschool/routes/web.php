@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Controller@getHome');
+Route::get('/students', 'Controller@getStudents');
+Route::get('/students/{id}', 'Controller@getStudent');
+Route::get('/teachers', 'Controller@getTeachers');
+Route::get('/teachers/{id}', 'Controller@getTeacher');
+Route::get('/categories/{name}', 'Controller@getCategories');
